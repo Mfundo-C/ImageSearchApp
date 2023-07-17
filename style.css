@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,200;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    line-height: 1.6;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin: 40px 0 60px 0;
+    
+}
+
+
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+
+}
+
+
+#search-input{
+    width: 60%;
+    max-width: 400px;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: 0 0 6px black;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+#search-button{
+    padding: 10px 20px;
+    background-color: blueviolet;
+    color: bisque;
+    border: none;
+    font-size: 18px;
+    box-shadow: 0 0 6px argba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+
+}
+
+.search-result{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.search-result-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 0 6px black;
+    overflow: hidden;
+    transition: opacity 0.2s ease-in-out;    
+
+}
+
+.search-result-item img{
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ margin-bottom: 10px;
+}
+
+.search-result:hover img{
+    opacity: 0.8;
+}
+
+.search-result-item a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+}
+
+#show-more-button{
+    background-color:blue;
+    font-size: 18px;
+    border: none;
+    color: aliceblue;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    margin: 30px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    display:none
+}
+
+@media screen and (max-width:768px){
+    .search-result-item{
+        padding: 20px;
+    }
+}
+
+
+@media screen and (max-width:480px){
+    .search-result{
+        grid-template-columns: fr;
+    }
+}
